@@ -1,8 +1,14 @@
-function fizzbuzz(number) {
-  if (number % 3 === 0 && number % 5 === 0) return "fizzbuzz";
-  if (number % 3 === 0) return "fizz";
-  if (number % 5 === 0) return "buzz";
-  return number.toString();
+const defaultSymbols = {
+  3: "fizz",
+  5: "buzz",
+};
+
+function fizzbuzz(number, symbols = defaultSymbols) {
+  const result = Object.entries(symbols).reduce(
+    (acc, diviser) => (number % diviser[0] === 0 ? acc + diviser[1] : acc),
+    ""
+  );
+  return result.length > 0 ? result : number.toString();
 }
 
 export default fizzbuzz;
