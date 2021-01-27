@@ -1,4 +1,4 @@
-const fizzbuzz = require("./fizzbuzz");
+import fizzbuzz from "./fizzbuzz";
 
 describe("fizzbuzz should,", () => {
   it("returns a regular number when is regular", () => {

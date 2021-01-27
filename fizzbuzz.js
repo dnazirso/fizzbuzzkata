@@ -5,4 +5,4 @@ function fizzbuzz(number) {
   return number.toString();
 }
 
-module.exports = fizzbuzz;
+export default fizzbuzz;
